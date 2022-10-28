@@ -8,7 +8,9 @@ end
 ###  WRITE YOUR TEST CODE HERE ###
 
 
-
+#author
+Mary = Author.new ("Mary")
+Joseph = Author.new ("Joseph")
 
 
 
