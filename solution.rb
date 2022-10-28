@@ -16,7 +16,7 @@ class Authors
     
 end
 class Magazine
-    attr_accessorr :category :name
+    attr_accessor :category, :name
     @@all = []
     def initialize(category, name)
         @category= category
