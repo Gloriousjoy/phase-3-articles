@@ -14,6 +14,12 @@ class Magazine
   def article_titles
     self.all.map {|article| article.title}
   end
+  def contributors
+    self.all.map {|article| article.author}.uniq
+  end
+  def contributing_authors
+    self.contributors.filter {|author| author.articles.count > 2}
+  end
 #class methods
 def self.all
   @@all
