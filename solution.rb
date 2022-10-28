@@ -8,6 +8,6 @@ class Authors
         @@all << self
     end
     def articles
-        
+        Articles.all.filter{|article| article.author == self}
     end
 end
