@@ -9,8 +9,8 @@ end
 
 
 #author
-Mary = Author.new ("Mary")
-Joseph = Author.new ("Joseph")
+mary = Author.new("Mary")
+joseph = Author.new("Joseph")
 
 
 

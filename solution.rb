@@ -13,6 +13,14 @@ class Authors
     def magazines
         self.articles.map{|article| article.magazine}.uniq
     end
+    def add_article (magazine, title)
+        Article.new(self, magazine, title)
+      end
+      def topic_areas
+        self.magazine.map {|magazine| magazine.category}.uniq
+      end
+    def self.all
+        @@al
     
 end
 class Magazine

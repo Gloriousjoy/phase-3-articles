@@ -5,7 +5,7 @@ class Author
   def initialize(name)
     @name = name
     @@all << self
-    =
+
     def articles
       Articles.all.filter{|article| article.author == self}
   end
@@ -22,4 +22,5 @@ class Author
   def self.all
     @@all
   end
+end
 end
