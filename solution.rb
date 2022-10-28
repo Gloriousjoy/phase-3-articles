@@ -7,4 +7,7 @@ class Authors
         @name = name
         @@all << self
     end
+    def articles
+        
+    end
 end
