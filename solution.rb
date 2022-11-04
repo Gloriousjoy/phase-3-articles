@@ -1,14 +1,14 @@
 # Please copy/paste all three classes into this file to submit your solution!
 #Author
 class Authors
-    attr_accessor :name 
+    attr_reader :name 
     @@all = []
     def initilize (name)
         @name = name
         @@all << self
     end
     def articles
-        Articles.all.filter{|article| article.author == self}
+        Article.all.filter{|article| article.author == self}
     end
     def magazines
         self.articles.map{|article| article.magazine}.uniq
@@ -21,8 +21,10 @@ class Authors
       end
     def self.all
         @@al
-    
+    end
 end
+
+#magazine
 class Magazine
     attr_accessor :category, :name
     @@all = []
@@ -34,10 +36,10 @@ class Magazine
             Article.all.filter {|article| article.magazine == self}
           end
           def article_titles
-            self.all.map {|article| article.title}
+            self.articles.map {|article| article.title}
           end
           def contributors
-            self.all.map {|article| article.author}.uniq
+            self.articles.map {|article| article.author}.uniq
           end
           def contributing_authors
             self.contributors.filter {|author| author.articles.count > 2}
@@ -49,8 +51,10 @@ class Magazine
         def self.find_by_name (name:)
           self.all.find{|magazine| magazine.name == name}
         end
+end
+        #article
     class Article
-    attr_accessor :author, :magazine, :title
+    attr_reader :author, :magazine, :title
     @@all = []
 def initialize (author, magazine, title)
     @author = author
