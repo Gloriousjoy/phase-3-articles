@@ -18,7 +18,7 @@ class Author
     Article.new(self, magazine, title)
   end
   def topic_areas
-    self.magazine.map{|magazine| magazine.category}.uniq
+    self.magazines.map{|magazine| magazine.category}.uniq
   end
   #class methods
   def self.all

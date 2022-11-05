@@ -9,18 +9,24 @@ end
 
 
 #author
-mary = Author.new("Mary")
-joseph = Author.new("Joseph")
+author1 = Author.new("Julius")
+        author2 = Author.new("Mary")
+        author3 = Author.new("CS Student")
 
-#magazine
-techguru = Magazine.new("Python is easier", "Technology")
-nairobigossip = Magazine.new("Tokodi's new obsession", "News")
-bigboystoys = Magazine.new("Audi new series", "Cars")
+        magazine1 =  Magazine.new("Python", "Coding")
+        magazine2 =  Magazine.new("Ruby", "Coding")
+        magazine3 =  Magazine.new("Investing", "Finance")
+        magazine4 =  Magazine.new("Genesis", "Bible")
 
-#Article
-article1= Article.new(mary,techguru, "Intro to Python.")
-article2 = Article.new(joseph,bigboystoys, "Is Audi greator than Mercedes?")
-article3 = Article.new(mary,nairobigossip, "Grace Kirapa has first child with Pascal Tokodi.")
+        article1 = Article.new(author3, magazine1, "Introduction to python")
+        article2 = Article.new(author3, magazine2, "Introduction to Ruby")
+        article3 = Article.new(author3, magazine2, "Active Records")
+        article3 = Article.new(author3, magazine2, "Rails")
+        article4 = Article.new(author2, magazine1, "Django ORM")
+        article5 = Article.new(author2, magazine3, "Investment Banking")
+        article6 = Article.new(author2, magazine3, "Money market")
+        article7 = Article.new(author1, magazine4, "The creation story")
+        article8 = Article.new(author1, magazine4, "The Fall")
 ### DO NOT REMOVE THIS
 binding.pry
 
